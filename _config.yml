@@ -1,0 +1,10 @@
+theme: jekyll-theme-primer
+title: flowl0ab
+plugins:
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  - jekyll-coffeescript
+
+# Build settings
+source: ./
+destination: ./_site

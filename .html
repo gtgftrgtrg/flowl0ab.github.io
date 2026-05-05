@@ -1,1 +1,149 @@
-.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Lab | Master the Science of Flow</title>
+    <!-- Professional font for a high-end engineering look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS UI CODE: BLUE & WHITE THEME --- */
+        :root {
+            --bg: #ffffff;             /* Pure White */
+            --card: #f8fafc;           /* Very Light Blue-Gray */
+            --primary: #2563eb;        /* Professional Royal Blue */
+            --accent: #3b82f6;         /* Lighter Blue */
+            --text: #1e293b;           /* Dark Slate for reading */
+            --text-dim: #64748b;       /* Muted gray for captions */
+            --glass-border: rgba(37, 99, 235, 0.1); 
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Smooth scrolling between sections */
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Navigation Bar */
+        .glass-nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border); padding: 1rem 0;
+        }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
+        .logo span { color: var(--primary); }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-dim); font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Section Layouts */
+        section { padding: 100px 0; border-bottom: 1px solid var(--glass-border); }
+        .main-hero { padding: 180px 0 100px; text-align: center; }
+        
+        /* Typography */
+        h1 { font-size: 3.5rem; margin: 20px 0; line-height: 1.1; }
+        h2 { font-size: 2.5rem; margin-bottom: 30px; }
+        .text-gradient { 
+            background: linear-gradient(90deg, var(--primary), var(--accent)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .status-pill { 
+            background: #eff6ff; color: var(--primary); 
+            padding: 6px 12px; border-radius: 20px; 
+            font-weight: 600; font-size: 0.85rem; 
+        }
+
+        /* Curriculum & Benefit List */
+        .benefit-list { list-style: none; padding: 0; }
+        .benefit-list li { 
+            margin-bottom: 1.5rem; padding: 1.5rem; 
+            background: var(--card); border-left: 4px solid var(--primary); 
+            border-radius: 0 10px 10px 0; border: 1px solid var(--glass-border); 
+        }
+
+        /* Image Gallery Grid */
+        .image-gallery { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 25px; margin-top: 40px; 
+        }
+        .gallery-item { 
+            background: white; padding: 12px; border-radius: 15px; 
+            border: 1px solid var(--glass-border); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; 
+        }
+        .gallery-item:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .gallery-item img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; }
+        .caption { font-size: 0.9rem; color: var(--text-dim); text-align: center; margin-top: 10px; font-weight: 600; }
+
+        /* Footer */
+        footer { background: #f8fafc; padding: 80px 0; border-top: 1px solid var(--glass-border); }
+        .footer-content { display: flex; justify-content: space-between; }
+    </style>
+</head>
+<body>
+
+<nav class="glass-nav">
+    <div class="container nav-content">
+        <div class="logo">FLOW<span>LAB</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#curriculum">Curriculum</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header id="home" class="main-hero">
+    <div class="container">
+        <span class="status-pill">Master the Science of Flow at Flow Lab</span>
+        <h1>Bridge the Gap Between Theory and <br><span class="text-gradient">Industry-Standard Simulation</span></h1>
+        <p>Unlock the full potential of Computational Fluid Dynamics with a curriculum designed for professional-grade execution.</p>
+    </div>
+</header>
+
+<section id="curriculum" class="container">
+    <h2 class="text-gradient">Detailed Curriculum</h2>
+    <ul class="benefit-list">
+        <li><strong>Module 1: Fundamental Physics</strong> Deep dive into Navier-Stokes equations and discretization techniques.</li>
+        <li><strong>Module 2: Meshing Strategy</strong> Generating high-fidelity meshes and optimizing density for speed and accuracy.</li>
+        <li><strong>Module 3: Turbulence Modeling</strong> Understanding RANS, LES, and solving complex convergence issues.</li>
+        <li><strong>Module 4: Post-Processing</strong> Producing accurate data required to replace expensive physical prototypes.</li>
+    </ul>
+</section>
+
+<section id="gallery" class="container">
+    <h2 class="text-gradient">Simulation Portfolio</h2>
+    <p>At Flow Lab, we turn complex flow into actionable insights.</p>
+    <div class="image-gallery">
+        <!-- Make sure these image names match your JPG files in the folder -->
+        <div class="gallery-item"><img src="download (5).jpg" alt="Practical CFD"><p class="caption">Practical CFD Mastery</p></div>
+        <div class="gallery-item"><img src="download (6).jpg" alt="Internal Flow"><p class="caption">Internal Flow Analysis</p></div>
+        <div class="gallery-item"><img src="download (7).jpg" alt="External Aero"><p class="caption">External Aerodynamics</p></div>
+        <div class="gallery-item"><img src="download (8).jpg" alt="Turbine Analysis"><p class="caption">Turbine System Design</p></div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container footer-content">
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>Email: <strong>sijal2005@gmail.com</strong></p>
+            <p>Support Hours: Monday – Friday, 9:00 AM – 5:00 PM</p>
+        </div>
+        <div class="tagline">
+            <p>Elevate your engineering. <br><strong>Turn flow into reality.</strong></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
